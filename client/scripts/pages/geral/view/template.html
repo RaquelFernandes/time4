@@ -1,0 +1,20 @@
+<div ng-controller="MenuController as ul">
+
+    <!-- Barra de navageção -->
+
+	<div class="container">
+		<!-- Container Menu e Conteúdo -->
+		<ul class="nav nav-pills">
+			<li role="presentation" class="active"><a href="/#/">Home</a></li>
+			<li role="presentation"><a href="/#/usuarios">Usuários</a></li>
+		</ul>
+
+		<!-- Conteúdo Principal -->
+		<!-- TODO: usar o GlobalController no view state -->
+		<div class="jumbotron">
+			<div ng-controller="GlobalController as vm">
+				<div ui-view layout-padding></div>
+			</div>
+		</div>
+	</div>
+</div>

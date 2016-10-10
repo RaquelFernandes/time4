@@ -216,7 +216,7 @@ gulp.task('usemin', function() {
 gulp.task('ngconstant:dev', function() {
     return ngConstant({
         dest: 'app.constants.js',
-        name: 'suApp',
+        name: 'integradorApp',
         deps:   false,
         noFile: true,
         interpolate: /\{%=(.+?)%\}/g,
