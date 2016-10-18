@@ -7,7 +7,7 @@
         $stateProvider
             
             .state('home', {
-                url: '/',
+                url: '/home',
                 templateUrl: "scripts/pages/home/view/home.html",
                 controller: 'HomeController'
             })
@@ -18,6 +18,11 @@
                 controller: 'usuarioController'
             })
 
+            .state('login', {
+                url: '/',
+                templateUrl: "scripts/pages/login/view/login.html",
+                controller: 'loginController'
+            })
 
     });
 
