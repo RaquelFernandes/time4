@@ -1,10 +1,10 @@
 angular.module('integradorApp')
-    .directive('menuLink', function() {
+    .directive('menu', function() {
         return {
             scope: {
                 section: '='
             },
-            templateUrl: 'scripts/app/templates/menu-link.tmpl.html',
+            templateUrl: 'scripts/app/directives/templates/menu.html',
             link: function($scope, $element) {
                 var controller = $element.parent().controller();
 

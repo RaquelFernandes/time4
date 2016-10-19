@@ -5,6 +5,12 @@
     angular.module('integradorApp').config(function($stateProvider) {
 
         $stateProvider
+
+            .state('login', {
+                url: '/',
+                templateUrl: "scripts/pages/login/view/login.html",
+                controller: 'loginController'
+            })
             
             .state('home', {
                 url: '/home',
@@ -12,17 +18,18 @@
                 controller: 'HomeController'
             })
 
-            .state('usuarios', {
-                url: '/usuarios',
-                templateUrl: "scripts/pages/usuarios/view/listagem.html",
-                controller: 'usuarioController'
+            .state('alunos', {
+                url: '/usuarios/aluno',
+                templateUrl: "scripts/pages/usuarios/view/listagemAluno.html",
+                controller: 'alunoController'
             })
 
-            .state('login', {
-                url: '/',
-                templateUrl: "scripts/pages/login/view/login.html",
-                controller: 'loginController'
+            .state('professores', {
+                url: '/usuarios/professor',
+                templateUrl: "scripts/pages/usuarios/view/listagemProfessor.html",
+                controller: 'professorController'
             })
+
 
     });
 

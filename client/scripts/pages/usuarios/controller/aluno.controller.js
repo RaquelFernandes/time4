@@ -1,11 +1,8 @@
 'use strict';
-angular
-    .module('integradorApp')
-    .controller('usuarioController',
-                 ['$scope',
-                   function ($scope) {
+angular.module('integradorApp')
+    .controller('alunoController', function ($scope) {
 
-
+        $scope.logado = true;
 
        $scope.listar = function() {
            $scope.usuarios = [
@@ -31,4 +28,4 @@ angular
 
         init();
 
-    }]);
+});

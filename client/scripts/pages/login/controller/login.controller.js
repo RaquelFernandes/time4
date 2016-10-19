@@ -1,15 +1,12 @@
 'use strict';
-angular
-    .module('integradorApp')
-    .controller('loginController',
-        ['$scope',
-            function ($scope) {
-
+angular.module('integradorApp')
+    .controller('loginController', function ($scope, $state) {
 
                 $scope.login = "Raquel";
+                $scope.logado = false;
 
-                $scope.pegarValores = function() {
-                    alert($scope.login + "   " + $scope.senha);
+                $scope.acessarSistema = function() {
+                    $state.go("home");
                 };
 
                 var init = function() {
@@ -18,4 +15,4 @@ angular
 
                 init();
 
-            }]);
+            });
