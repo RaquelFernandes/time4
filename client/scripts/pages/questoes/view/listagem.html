@@ -1,0 +1,18 @@
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">Panel heading</div>
+    <table class="table">
+      <tr class="table-header">
+        <th>Questão</th>
+        <th>Alternativas</th>
+        <th>Alterar</th>
+        <th>Excluir</th>
+      </tr>
+      <tr class="table-body" ng-repeat="questao in questoesLista">
+          <td>{{ questao.pergunta }}</td>
+          <td>{{ questao.resposta }}</td>
+          <td><i class="glyphicon glyphicon-pencil"></i></td>
+          <td><i class="glyphicon glyphicon-trash"></i></td>
+      </tr>
+    </table>
+</div>
