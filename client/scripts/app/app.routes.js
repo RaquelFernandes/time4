@@ -1,28 +1,35 @@
 (function () {
-
+	
     'use strict';
 
     angular.module('integradorApp').config(function($stateProvider) {
 
         $stateProvider
 
-            .state('home', {
+            .state('login', {
                 url: '/',
+                templateUrl: "scripts/pages/login/view/login.html",
+                controller: 'loginController'
+            })
+            
+            .state('home', {
+                url: '/home',
                 templateUrl: "scripts/pages/home/view/home.html",
                 controller: 'HomeController'
             })
 
-            .state('usuarios', {
-                url: '/usuarios',
-                templateUrl: "scripts/pages/usuarios/view/listagem.html",
-                controller: 'usuarioController'
+            .state('alunos', {
+                url: '/usuarios/aluno',
+                templateUrl: "scripts/pages/usuarios/view/listagemAluno.html",
+                controller: 'alunoController'
             })
 
-						.state('questoes', {
-								url: '/questoes',
-								templateUrl: "scripts/pages/questoes/view/listagem.html",
-								controller: 'questoesController'
-						})
+            .state('professores', {
+                url: '/usuarios/professor',
+                templateUrl: "scripts/pages/usuarios/view/listagemProfessor.html",
+                controller: 'professorController'
+            })
+
 
     });
 
