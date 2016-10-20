@@ -1,5 +1,5 @@
 (function () {
-	
+
     'use strict';
 
     angular.module('integradorApp').config(function($stateProvider) {
@@ -11,7 +11,7 @@
                 templateUrl: "scripts/pages/login/view/login.html",
                 controller: 'loginController'
             })
-            
+
             .state('home', {
                 url: '/home',
                 templateUrl: "scripts/pages/home/view/home.html",
@@ -30,6 +30,17 @@
                 controller: 'professorController'
             })
 
+						.state('questoesLista', {
+	                url: '/questoes/listagem',
+	                templateUrl: "scripts/pages/questoes/view/listagem.html",
+	                controller: 'questoesController'
+	            })
+
+						.state('questoesInserir', {
+	                url: '/questoes/inserir',
+	                templateUrl: "scripts/pages/questoes/view/inserir.html",
+	                controller: 'questoesController'
+	            })
 
     });
 
