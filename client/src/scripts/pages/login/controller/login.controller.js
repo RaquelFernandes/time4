@@ -2,7 +2,7 @@
 angular.module('integradorApp')
     .controller('loginController', function ($scope, $state) {
 
-                $scope.login = "Raquel";
+                $scope.login = null;
                 $scope.logado = false;
 
                 $scope.acessarSistema = function() {

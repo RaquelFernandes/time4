@@ -36,6 +36,18 @@
         url: '/usuarios/professor',
         templateUrl: "scripts/pages/usuarios/view/listagemProfessor.html",
         controller: 'professorController'
+      })
+
+      .state('questoesLista', {
+        url: '/questoes/listagem',
+        templateUrl: "scripts/pages/questoes/view/listagem.html",
+        controller: 'questoesController'
+      })
+
+      .state('questoesInserir', {
+        url: '/questoes/inserir',
+        templateUrl: "scripts/pages/questoes/view/inserir.html",
+        controller: 'questoesController'
       });
 
   }

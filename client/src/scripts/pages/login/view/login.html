@@ -1,21 +1,23 @@
 <div class="input-group">
-    <span class="input-group-addon" id="sizing-addon2">@</span>
+    <span class="input-group-addon" id="sizing-addon2">Login</span>
     <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2" ng-model="login">
 </div>
 
 <div class="input-group">
-    <span class="input-group-addon" id="sizing-addon2">#</span>
+    <span class="input-group-addon" id="sizing-addon2">Senha</span>
     <input type="password" class="form-control" placeholder="Password" aria-describedby="sizing-addon2" ng-model="senha">
 </div>
-
-<button type="button" class="btn btn-default dropdown-toggle btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+<button type="button" class="btn  btn-success" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
             ng-click="acessarSistema()">
     Acessar
 </button>
+<br/>
+<br/>
+<div class="null" role="alert">
+  <a href="#" class="alert-link">Esqueceu a senha?</a>
+</div>
 
 <br/>
 <br/>
 <br/>
 <br/>
-
-{{login}} - {{senha}}
