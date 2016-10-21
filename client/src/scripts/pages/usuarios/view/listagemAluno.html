@@ -1,0 +1,21 @@
+
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">Panel heading</div>
+
+        <!-- Table -->
+        <table class="table">
+            <tr class="table-header">
+                <th>Matrícula</th>
+                <th>Nome</th>
+                <th>E-mail</th>
+            </tr>
+            <tr class="table-body" ng-repeat="usuario in usuarios">
+                <td>{{usuario.matricula}}</td>
+                <td>{{usuario.nome}}</td>
+                <td>{{usuario.email}}</td>
+            </tr>
+        </table>
+    </div>
+
+
