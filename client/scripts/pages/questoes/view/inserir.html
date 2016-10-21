@@ -1,5 +1,5 @@
     <!-- Default panel contents -->
-  <form class="form-control">
+  <!-- <form class="form-control">
     <h3>Inserir Questão</h3>
 
       <div class="form-group col-md-12">
@@ -7,14 +7,37 @@
           <input type="radio" name="tipoQuestao" id="Subjetiva"> Subjetiva
           <input type="radio" name="tipoQuestao" id="Objetiva"> Objetiva
         </div>
-        <label class="label-control col-md-2">Questão</label>
+
         <input type="text" placeholder="QUESTÂO" />
       </div>
 
       <div class="form-group col-md-12">
-        <label class="label-control col-md-2">Resposta</label>
+
         <div class="col-md-2">
+
           <input type="text" placeholder="RESPOSTA"  />
         </div>
       </div>
-  </form>
+  </form> -->
+
+  <form>
+      <h2>Inserir Questão</h2>
+  <div class="form-group">
+
+    <div class="checkbox">
+      <label>
+        <input type="radio" name="tipoQuestao" id="Subjetiva"> Subjetiva
+        <input type="radio" name="tipoQuestao" id="Objetiva"> Objetiva
+      </label>
+    </div>
+
+    <label class="label-control col-md-2">Questão</label>
+    <input type="text" class="form-control" id="questao" placeholder="Questao">
+  </div>
+  <div class="form-group">
+    <label class="label-control col-md-2">Resposta</label>
+    <input type="text" class="form-control" id="resposta" placeholder="Resposta">
+    <button type="submit" class="btn btn-default">Inserir</button>
+  </div>
+  
+</form>
