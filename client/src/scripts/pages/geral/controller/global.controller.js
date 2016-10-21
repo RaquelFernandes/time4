@@ -4,6 +4,6 @@ angular.module('integradorApp')
 
         var vm = this;
 
-        $state.go("inicio");
+        $state.go("login");
 
 });
