@@ -1,22 +1,40 @@
-<html>
-<head>
-<title>Alunos</title>
-<link rel="stylesheet" href="{{ asset('css/app.css') }}">
-</head>
-<body>
 
-  <ul class="nav nav-tabs">
-  <li role="presentation" class="active"><a href="#">Home</a></li>
-  <li role="presentation"><a href="#">Profile</a></li>
-  <li role="presentation"><a href="#">Messages</a></li>
-</ul>
-  <h1>Olá</h1>
+@extends('app')
 
-  <?php var_dump($alunos); ?>
+@section('content')
 
-<script src="{{ asset('js/jquery.min.js') }}"></script>
-<script src="{{ asset('js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('js/sweetalert.min.js') }}"></script>
+  <h1>Alunos</h1>
 
-</body>
-<html>
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Nome</th>
+        <th>Matrícula</th>
+        <th>E-mail</th>
+        <th>Opções</th>
+      </tr>
+      </thead>
+      <tbody>
+        @foreach($alunos as $aluno)
+          <tr>
+            <td>{{ $aluno->id }}</td>
+            <td>{{ $aluno->nome }}</td>
+            <td>{{ $aluno->matricula }}</td>
+            <td>{{ $aluno->email }}</td>
+            <td>
+              <a class="btn btn-link btn-xs"
+                title="Editar" rel="tooltip" data-placement="top">
+                <span class="glyphicon glyphicon-pencil"></span>
+              </a>
+              <a class="btn btn-link btn-xs" data-toggle="modal"
+                  title="Excluir" rel="tooltip" data-placement="top">
+                <span class="glyphicon glyphicon-remove"></span>
+              </a>
+            </td>
+          </tr>
+        @endforeach
+      </tbody>
+  </table>
+
+@endsection

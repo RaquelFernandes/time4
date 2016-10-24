@@ -15,4 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('alunos', 'AlunosController@index');
+Route::group(['prefix'=>'alunos'], function() {
+    Route::get('', 'AlunosController@index');
+});
