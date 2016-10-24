@@ -7,6 +7,7 @@
   ],
   "license": "MIT",
   "keywords": [
+    "projeto",
     "integrador"
   ],
   "homepage": "https://github.com/jsrmjr/time4",
@@ -15,6 +16,7 @@
     "**/.*",
     "node_modules",
     "bower_components",
+    "vendor/bower_components",
     "test",
     "tests"
   ],
