@@ -1,0 +1,53 @@
+<h1>Alunos</h1>
+
+<table class="table table-striped table-bordered table-hover">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Nome</th>
+        <th>Matrícula</th>
+        <th>E-mail</th>
+        <th>Opções</th>
+    </tr>
+    </thead>
+    <tbody>
+
+        <tr ng-repeat="aluno in alunos">
+            <td>{{ aluno.id }}</td>
+            <td>{{ aluno.nome }}</td>
+            <td>{{ aluno.matricula }}</td>
+            <td>{{ aluno.email }}</td>
+            <td>
+                <a class="btn btn-link btn-xs"
+                   title="Editar" rel="tooltip" data-placement="top">
+                    <span class="glyphicon glyphicon-pencil"></span>
+                </a>
+                <a class="btn btn-link btn-xs" data-toggle="modal"
+                   title="Excluir" rel="tooltip" data-placement="top">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </a>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+
+<table>
+    <tr>
+        <th style="border: 1px solid;">aluno</th>
+        <th style="border: 1px solid;">matricula</th>
+        <th style="border: 1px solid;">questoes</th>
+    </tr>
+    <tr ng-repeat="p in prova" style="border: 1px solid;">
+        <td ng-bind="p.aluno" style="border: 1px solid;"></td>
+        <td style="border: 1px solid;">{{p.matricula}}</td>
+        <td style="border: 1px solid;">
+            <span ng-repeat="a in p.questoes">
+                <b>{{a.questao}}</b>
+                <br/>
+            </span>
+        </td>
+    </tr>
+
+</table>
