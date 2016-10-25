@@ -1,0 +1,9 @@
+/vendor
+/service
+/client
+/node_modules
+/bower_components
+/public/storage
+Homestead.yaml
+Homestead.json
+.env
