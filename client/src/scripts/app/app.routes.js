@@ -32,6 +32,12 @@
         controller: 'alunoController'
       })
 
+        .state('cadastrarAlunos', {
+          url: '/alunos/cadastrar',
+          templateUrl: "scripts/pages/alunos/view/cadastrarAluno.html",
+          controller: 'alunoController'
+        })
+
       .state('professores', {
         url: '/professores',
         templateUrl: "scripts/pages/professores/view/listagemProfessor.html",

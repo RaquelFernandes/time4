@@ -1,6 +1,6 @@
 'use strict';
 angular.module('integradorApp')
-    .controller('alunoController', function ($scope) {
+    .controller('alunoController', function ($scope, $state) {
 
         $scope.logado = true;
 
@@ -25,36 +25,18 @@ angular.module('integradorApp')
            ];
        };
 
-       $scope.prova = [
-           {
-               aluno: 'Raquel',
-               matricula: '1514290042',
-               questoes: [
-                   {
-                        questao: '01'
-                   },{
-                       questao: '02'
-                   },{
-                       questao: '03'
-                   }
-               ]
-            },{
-               aluno: 'Tawan',
-               matricula: '1514290042',
-               questoes: [
-                   {
-                       questao: '01'
-                   },{
-                       questao: '02'
-                   },{
-                       questao: '03'
-                   }
-               ]
-           }
-       ];
-
         var init = function () {
             $scope.listar();
+        };
+
+        $scope.voltar = function() {
+            $state.go('alunos');
+        };
+
+        var salvar  = function() {
+
+            
+
         };
 
         init();

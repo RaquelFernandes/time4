@@ -1,50 +1,96 @@
-<h1>Alunos</h1>
 
 <form class="form-horizontal" method="POST">
 
     <div class="panel panel-default">
         <div class="panel-heading">
             <div class="clearfix">
-                <h1 class="panel-title aw-titulo-panel">Novo Título</h1>
-                <a class="btn btn-link aw-link-panel" href="/#/alunos">Voltar para pesquisa</a>
+                <h1 class="panel-title aw-titulo-panel">Novo Aluno</h1>
+                <a class="btn btn-link aw-link-panel" href="/#/alunos">Voltar para listagem</a>
             </div>
         </div>
 
         <div class="panel-body">
-            <input type="hidden" />
 
-            <div class="form-group">
+            <div class="form-group" ng-class="!aluno.nome ? 'has-error' : ''">
                 <label for="nome" class="col-sm-2 control-label">Nome:</label>
                 <div class="col-sm-4">
-                    <input type="text" class="form-control" ng-model="aluno.nome" id="nome" />
+                    <input type="text" class="form-control" ng-model="aluno.nome" id="nome" ng-required="true"/>
                 </div>
             </div>
+
+            <div class="form-group" ng-class="!aluno.matricula ? 'has-error' : ''">
+                <label for="matricula" class="col-sm-2 control-label">Matrícula:</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" ng-model="aluno.matricula" id="matricula" ng-required="true"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div ng-class="!aluno.email ? 'has-error' : ''">
+                    <label for="email" class="col-sm-2 control-label">E-mail:</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" ng-model="aluno.email" id="email" ng-required="true"/>
+                    </div>
+                </div>
+
+                <div ng-class="!aluno.repeteEmail ? 'has-error' : ''">
+                    <label for="repeteEmail" class="col-sm-2 control-label">Repetir E-mail:</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" ng-model="aluno.repeteEmail" id="repeteEmail" ng-required="true"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div ng-class="!aluno.senha ? 'has-error' : ''">
+                    <label for="senha" class="col-sm-2 control-label">Senha:</label>
+                    <div class="col-sm-3">
+                        <input type="password" class="form-control" ng-model="aluno.senha" id="senha" ng-required="true" />
+                    </div>
+                </div>
+
+                <div ng-class="!aluno.repeteSenha ? 'has-error' : ''">
+                    <label for="repeteSenha" class="col-sm-2 control-label">Repetir Senha:</label>
+                    <div class="col-sm-3">
+                        <input type="password" class="form-control" ng-model="aluno.repeteSenha" id="repeteSenha" ng-required="true" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="rg" class="col-sm-2 control-label">RG:</label>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control" ng-model="aluno.rg" id="rg" />
+                </div>
+
+                <div ng-class="!aluno.cpf ? 'has-error' : ''">
+                    <label for="cpf" class="col-sm-2 control-label">CPF:</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" ng-model="aluno.cpf" id="cpf" ng-required="true" />
+                    </div>
+                </div>
+            </div>
+
             <div class="form-group" >
-                <label for="dataNascimento" class="col-sm-2 control-label">Data de nascimento</label>
+                <label for="dataNascimento" class="col-sm-2 control-label">Data de nascimento:</label>
                 <div class="col-sm-2">
-                    <input type="text" class="form-control" id="aluno.dataNascimento" id="dataNascimento"
+                    <input type="text" class="form-control" ng-model="aluno.dataNascimento" id="dataNascimento"
                            data-provide="datepicker" data-date-format="dd/mm/yyyy" data-date-language="pt-BR"
                            data-date-autoclose="true" data-date-today-highlight="true" data-date-orientation="bottom"/>
                 </div>
             </div>
+
             <div class="form-group">
-                <label for="valor" class="col-sm-2 control-label">Valor</label>
+                <label for="turma" class="col-sm-2 control-label">Turma:</label>
                 <div class="col-sm-2">
-                    <input type="text" class="form-control js-currency" id="valor"/>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="status" class="col-sm-2 control-label">Status</label>
-                <div class="col-sm-2">
-                    <select class="form-control" id="status" name="status">
+                    <select class="form-control" id="turma" name="turma" ng-model="aluno.turma">
                         <option ></option>
                     </select>
                 </div>
             </div>
-            <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" class="btn btn-primary">Salvar</button>
-                </div>
+            <div class="btn-group pull-right">
+                <button style="margin-right: 10px;" type="button" class="btn btn-primary" ng-click="voltar()">Fechar</button>
+                <button type="button" class="btn btn-primary" ng-click="">Salvar</button>
             </div>
         </div>
 

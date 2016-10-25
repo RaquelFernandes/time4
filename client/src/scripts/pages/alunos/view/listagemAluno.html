@@ -22,7 +22,7 @@
                    title="Editar" rel="tooltip" data-placement="top">
                     <span class="glyphicon glyphicon-pencil"></span>
                 </a>
-                <a class="btn btn-link btn-xs" data-toggle="modal"
+                <a class="btn btn-link btn-xs" data-toggle="modal" data-target="#confirmarExclusaoAluno"
                    title="Excluir" rel="tooltip" data-placement="top">
                     <span class="glyphicon glyphicon-remove"></span>
                 </a>
@@ -32,22 +32,4 @@
     </tbody>
 </table>
 
-
-<table>
-    <tr>
-        <th style="border: 1px solid;">aluno</th>
-        <th style="border: 1px solid;">matricula</th>
-        <th style="border: 1px solid;">questoes</th>
-    </tr>
-    <tr ng-repeat="p in prova" style="border: 1px solid;">
-        <td ng-bind="p.aluno" style="border: 1px solid;"></td>
-        <td style="border: 1px solid;">{{p.matricula}}</td>
-        <td style="border: 1px solid;">
-            <span ng-repeat="a in p.questoes">
-                <b>{{a.questao}}</b>
-                <br/>
-            </span>
-        </td>
-    </tr>
-
-</table>
+<div ng-include="'scripts/pages/alunos/view/modalExcluirAluno.html'"></div>
