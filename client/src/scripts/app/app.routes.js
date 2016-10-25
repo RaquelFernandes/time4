@@ -27,19 +27,19 @@
       })
 
       .state('alunos', {
-        url: '/usuarios/aluno',
-        templateUrl: "scripts/pages/usuarios/view/listagemAluno.html",
+        url: '/alunos',
+        templateUrl: "scripts/pages/alunos/view/listagemAluno.html",
         controller: 'alunoController'
       })
 
       .state('professores', {
-        url: '/usuarios/professor',
-        templateUrl: "scripts/pages/usuarios/view/listagemProfessor.html",
+        url: '/professores',
+        templateUrl: "scripts/pages/professores/view/listagemProfessor.html",
         controller: 'professorController'
       })
 
       .state('questoesLista', {
-        url: '/questoes/listagem',
+        url: '/questoes',
         templateUrl: "scripts/pages/questoes/view/listagem.html",
         controller: 'questoesController'
       })
